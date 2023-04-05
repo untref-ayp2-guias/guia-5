@@ -1,7 +1,7 @@
 # Guía 5
 ## Mapa de Bits y Tablas de Hash
 
-En la carpeta `/mapaDeBits` se encuentra una implementación de un mapa de sobre un entero de 32 bits.
+En la carpeta `/mapadebits` se encuentra una implementación de un mapa de sobre un entero de 32 bits.
 La carpeta `/tests` contiene los tests unitarios del mapa. Por favor no modificar los nombres de estos archivos para que funcionen las pruebas automáticas
 
 ## Ejercicios
