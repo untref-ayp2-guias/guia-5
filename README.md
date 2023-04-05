@@ -8,7 +8,13 @@ La carpeta `/tests` contiene los tests unitarios del mapa. Por favor no modifica
 
 Completar los ejercicios en el archivo un ejercicios.go igual que en las guías anteriores
 
-1. Implementar el TAD Conjunto sobre un Mapa de Bits con las operacines de Conjuntos.
+1. Implementar el TAD Conjunto sobre un Map de Go. Tal que las operaciones Add, Remove y Search sean O(1). Sabiendo que los Map de Go usan hashing para almacenar sus claves. La idea por lo tanto es aprovechar el map para almacenar los elementos del conjunto como las claves de un map.
+```go
+type Set [T comparable]{
+  elementos Map[T]struct{}
+ }
+ ```
+  
 
 2. Dada una tabla de hash de tamaño 7 y la función de hashing h(x) = x mod 7, inserte los números 1, 8, 27, 125, 216, 343, resolviendo los choques con:
   - el método de hashing cerrado
