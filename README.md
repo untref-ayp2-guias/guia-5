@@ -26,4 +26,6 @@ y dibuje las tablas resultantes en cada caso.
   - el método de hashing abierto
 y dibuje las tablas resultantes en cada caso.
 
+4. Se quiere crear un registro de asistencia para la clase, sabiendo que son 40 alumnos. Las operaciones que debe soportar el registro son dado un día listar los ausentes. Listar todos los alumnos que no tuvieron ninguna falta en todo el mes además de las operaciones propia del registro como colocar presente o ausente a cada alumno.
+
 
