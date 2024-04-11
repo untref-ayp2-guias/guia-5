@@ -30,13 +30,8 @@ func (a *Asistencias) Asistio(alumno uint, clase uint8) bool {
 
 // ListarClase devuelve un set con los alumnos que asistieron a la clase indicada
 func (a *Asistencias) ListarClase(clase uint8) set.Set[uint] {
-	alumnos := set.NewListSet[uint]()
-	for i, bitmap := range a.mapaDeBits {
-		if on, _ := bitmap.IsOn(clase); on {
-			alumnos.Add(uint(i))
-		}
-	}
-	return alumnos
+	// Implementar
+	return nil
 }
 
 // ListarAlumno devuelve un set con las clases a las que asistió el alumno indicado
