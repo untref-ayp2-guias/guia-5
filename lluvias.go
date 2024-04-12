@@ -1,7 +1,6 @@
 package guia5
 
 import (
-	bm "github.com/untref-ayp2/data-structures/bitmap"
 	"github.com/untref-ayp2/data-structures/set"
 )
 
@@ -15,7 +14,7 @@ const (
 	febrero
 	marzo
 	abril
-	mayo 
+	mayo
 	junio
 	julio
 	agosto
@@ -23,12 +22,12 @@ const (
 	octubre
 	noviembre
 	diciembre
-) 
+)
 
-//valida si el Mes y el dia son validos
+// valida si el Mes y el dia son validos
 func validaFecha(d uint8, m Mes) bool {
 	switch m {
-		case abril, junio, septiembre, noviembre:
+	case abril, junio, septiembre, noviembre:
 		return d >= 1 && d <= 30
 	case febrero:
 		return d >= 1 && d <= 29
@@ -36,7 +35,6 @@ func validaFecha(d uint8, m Mes) bool {
 		return d >= 1 && d <= 31
 	}
 }
-
 
 // Lluvias es una estructura que representa la cantidad de lluvias caídas en un año
 type Lluvias struct {
@@ -51,7 +49,7 @@ func NewLluvias() *Lluvias {
 
 // Registrar lluvia registra un dia del año en que llovió
 // Si la fecha es inválida, no hace nada
-func (l *Lluvias) Registrar( d uint8, m Mes) {
+func (l *Lluvias) Registrar(d uint8, m Mes) {
 	// Implementar
 }
 
@@ -67,17 +65,14 @@ func (l *Lluvias) Llovio(d uint8, m Mes) bool {
 	return false
 }
 
-
-
 // ListarMes lista los días en que llovió en un Mes
-func (l *Lluvias) ListarMes(m Mes) *set.ListSet[uint8] {
+func (l *Lluvias) ListarMes(m Mes) *set.SetList[uint8] {
 	// Implementar
 	return nil
 }
 
-// Dado dos meses, listar los días que llovieron en ambos	
-func (l *Lluvias) ListarDiasEnAmbosMeses(m1 Mes, m2 Mes) *set.ListSet[uint8] {
+// Dado dos meses, listar los días que llovieron en ambos
+func (l *Lluvias) ListarDiasEnAmbosMeses(m1 Mes, m2 Mes) *set.SetList[uint8] {
 	// Implementar
 	return nil
 }
-

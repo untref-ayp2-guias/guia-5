@@ -1,8 +1,8 @@
 package guia5
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestRegistrarAsistencia(t *testing.T) {
