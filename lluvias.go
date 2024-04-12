@@ -66,13 +66,13 @@ func (l *Lluvias) Llovio(d uint8, m Mes) bool {
 }
 
 // ListarMes lista los días en que llovió en un Mes
-func (l *Lluvias) ListarMes(m Mes) *set.SetList[uint8] {
+func (l *Lluvias) ListarMes(m Mes) *set.ListSet[uint8] {
 	// Implementar
 	return nil
 }
 
 // Dado dos meses, listar los días que llovieron en ambos
-func (l *Lluvias) ListarDiasEnAmbosMeses(m1 Mes, m2 Mes) *set.SetList[uint8] {
+func (l *Lluvias) ListarDiasEnAmbosMeses(m1 Mes, m2 Mes) *set.ListSet[uint8] {
 	// Implementar
 	return nil
 }

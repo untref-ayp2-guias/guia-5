@@ -1,7 +1,6 @@
 package guia5
 
 import (
-	bm "github.com/untref-ayp2/data-structures/bitmap"
 	"github.com/untref-ayp2/data-structures/set"
 )
 
