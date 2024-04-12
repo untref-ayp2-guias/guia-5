@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func TestRegistrar(t *testing.T) {
@@ -37,6 +38,7 @@ func TestListarMes(t *testing.T) {
 	lluvias.Registrar(9, enero)
 	lluvias.Registrar(25, enero)
 	dias := lluvias.ListarMes(enero)
+	require.NotNil(t, dias)
 	assert.Equal(t, 5, dias.Size())
 	assert.True(t, dias.Contains(1))
 	assert.True(t, dias.Contains(2))
@@ -55,6 +57,7 @@ func TestListarDiasEnAmbosMeses(t *testing.T) {
 	lluvias.Registrar(25, mayo)
 	lluvias.Registrar(25, noviembre)
 	dias := lluvias.ListarDiasEnAmbosMeses(enero, marzo)
+	require.NotNil(t, dias)
 	assert.Equal(t, 2, dias.Size())
 	assert.True(t, dias.Contains(1))
 	assert.True(t, dias.Contains(10))

@@ -1,8 +1,10 @@
 package guia5
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func TestRegistrarAsistencia(t *testing.T) {
@@ -41,6 +43,7 @@ func TestListarClase(t *testing.T) {
 	asistencias.RegistrarAsistencia(1, 4)
 	asistencias.RegistrarAsistencia(2, 4)
 	alumnos := asistencias.ListarClase(0)
+	require.NotNil(t, alumnos)
 	assert.Equal(t, 2, alumnos.Size())
 	assert.True(t, alumnos.Contains(0))
 	assert.True(t, alumnos.Contains(1))
@@ -73,6 +76,7 @@ func TestListarAlumno(t *testing.T) {
 	asistencias.RegistrarAsistencia(1, 4)
 	asistencias.RegistrarAsistencia(2, 4)
 	clases := asistencias.ListarAlumno(1)
+	require.NotNil(t, clases)
 	assert.Equal(t, 5, clases.Size())
 	assert.True(t, clases.Contains(0))
 	assert.True(t, clases.Contains(1))
@@ -105,6 +109,7 @@ func TestListarAsistencias(t *testing.T) {
 	asistencias.RegistrarAsistencia(1, 4)
 	asistencias.RegistrarAsistencia(2, 2)
 	clases := asistencias.ListarAsistencias()
+	require.NotNil(t, clases)
 	assert.Equal(t, 1, clases.Size())
 	assert.True(t, clases.Contains(2))
 }
@@ -123,6 +128,7 @@ func TestListarAsistenciaPerfecta(t *testing.T) {
 	asistencias.RegistrarAsistencia(2, 3)
 	asistencias.RegistrarAsistencia(2, 4)
 	alumnos := asistencias.ListarAsistenciaPerfecta()
+	require.NotNil(t, alumnos)
 	assert.Equal(t, 1, alumnos.Size())
 	assert.True(t, alumnos.Contains(0))
 }
